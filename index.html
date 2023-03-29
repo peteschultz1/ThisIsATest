@@ -1,109 +1,79 @@
-<header>
-  <div class="logo">
-    <a href="#">My Website</a>
-  </div>
-  <div class="menu-toggle">
-    <div class="hamburger"></div>
-  </div>
-  <nav>
-    <ul>
-      <li><a href="#">Home</a></li>
-      <li><a href="#">About</a></li>
-      <li><a href="#">Services</a></li>
-      <li><a href="#">Contact</a></li>
-    </ul>
-  </nav>
-</header>
+<!DOCTYPE html>
 
-<script>
-  const menuToggle = document.querySelector('.menu-toggle');
-  const menuContainer = document.querySelector('nav');
+<html lang="en">
 
-  menuToggle.addEventListener('click', () => {
-    menuToggle.classList.toggle('open');
-    menuContainer.classList.toggle('active');
-  });
-</script>
+ <head>
 
-<style>
-  /* Hamburger Menu */
-  .menu-toggle {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    cursor: pointer;
-    padding: 10px;
-    background-color: #333;
-    color: #fff;
-  }
-  .hamburger {
-    display: block;
-    width: 25px;
-    height: 2px;
-    background-color: #fff;
-    position: relative;
-    transition: all 0.3s ease-in-out;
-  }
-  .hamburger:before, .hamburger:after {
-    content: '';
-    display: block;
-    width: 100%;
-    height: 100%;
-    background-color: #fff;
-    position: absolute;
-    transition: all 0.3s ease-in-out;
-  }
-  .hamburger:before {
-    transform: translateY(-7px);
-  }
-  .hamburger:after {
-    transform: translateY(7px);
-  }
-  .open .hamburger {
-    transform: rotate(45deg);
-  }
-  .open .hamburger:before {
-    transform: translateY(0) rotate(45deg);
-  }
-  .open .hamburger:after {
-    transform: translateY(0) rotate(-45deg);
-  }
+   <meta charset="UTF-8" />
 
-  /* Navigation Menu */
-  nav {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    background-color: #333;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: all 0.3s ease-in-out;
-    height: 0;
-    overflow: hidden;
-  }
-  nav.active {
-    height: auto;
-  }
-  nav ul {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-  nav li {
-    margin: 10px 0;
-  }
-  nav a {
-    display: block;
-    color: #fff;
-    text-align: center;
-    text-decoration: none;
-    font-size: 18px;
-    padding: 10px;
-    transition: all 0.3s ease-in-out;
-  }
+   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+   <link rel="stylesheet" href="style.css" />
+
+   <title>Document</title>
+
+ </head>
+
+ <body>
+
+   <nav class="navbar">
+
+     <!-- LOGO -->
+
+     <div class="logo">MUO</div>
+
+     <!-- NAVIGATION MENU -->
+
+     <ul class="nav-links">
+
+       <!-- USING CHECKBOX HACK -->
+
+       <input type="checkbox" id="checkbox_toggle" />
+
+       <label for="checkbox_toggle" class="hamburger">&#9776;</label>
+
+       <!-- NAVIGATION MENUS -->
+
+       <div class="menu">
+
+         <li><a href="/">Home</a></li>
+
+         <li><a href="/">About</a></li>
+
+         <li class="services">
+
+           <a href="/">Services</a>
+
+           <!-- DROPDOWN MENU -->
+
+           <ul class="dropdown">
+
+             <li><a href="/">Dropdown 1 </a></li>
+
+             <li><a href="/">Dropdown 2</a></li>
+
+             <li><a href="/">Dropdown 2</a></li>
+
+             <li><a href="/">Dropdown 3</a></li>
+
+             <li><a href="/">Dropdown 4</a></li>
+
+           </ul>
+
+         </li>
+
+         <li><a href="/">Pricing</a></li>
+
+         <li><a href="/">Contact</a></li>
+
+       </div>
+
+     </ul>
+
+   </nav>
+
+ </body>
+
+</html>
