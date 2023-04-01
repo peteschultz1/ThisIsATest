@@ -1,6 +1,8 @@
-const toggleButton = document.querySelector('.toggle-button');
-const navLinks = document.querySelector('.nav-links');
-
-toggleButton.addEventListener('click', () => {
-	navLinks.classList.toggle('active');
-});
+function myFunction() {
+  var x = document.getElementById("myNav-Bar");
+  if (x.className === "nav-bar") {
+    x.className += " responsive";
+  } else {
+    x.className = "nav-bar";
+  }
+}
